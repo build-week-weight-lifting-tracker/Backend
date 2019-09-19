@@ -1,0 +1,32 @@
+{
+  "name": "build-week-backend",
+  "version": "1.0.0",
+  "description": "Build-Week-Weightlifting-Tracker_Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/build-week-weight-lifting-tracker/Backend.git"
+  },
+  "author": "Lucas Larrubia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/build-week-weight-lifting-tracker/Backend/issues"
+  },
+  "homepage": "https://github.com/build-week-weight-lifting-tracker/Backend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.19.4",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
