@@ -4,7 +4,9 @@ module.exports = {
     addExercise,
     findExercise,
     findByExercise,
-    findByExerciseId
+    findByExerciseId,
+    updateExercise,
+    deleteExercise
 };
 
 function findExercise() {
@@ -23,4 +25,12 @@ async function addExercise(exercise) {
 
 function findByExerciseId(id) {
     return db('exercises').where({ id }).first();
+}
+
+function updateExercise(id, exercise) {
+    return db('exercises').where({ id }).update(exercise)
+}
+
+function deleteExercise(id) {
+    return db('exercises').where({ id }).del()
 }
