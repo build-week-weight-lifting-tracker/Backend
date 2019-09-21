@@ -2,10 +2,10 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('body_region', tbl => {
       tbl
-        .increments()
+        .increments();
       tbl
         .string('region')
-        .notNullable()
+        .notNullable();
   })
 };
 

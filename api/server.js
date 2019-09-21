@@ -11,9 +11,8 @@ server.use(helmet());
 server.use(express.json());
 server.use(cors());
 
-// server.use('/api', )
-// server.use('/api', )
-// server.use('/api', )
+// server.use('/api/', )
+// server.use('/api/exercises', )
 
 server.get('/', (req, res) => {
     res.send("YOOOO");

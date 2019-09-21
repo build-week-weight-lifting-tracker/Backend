@@ -8,7 +8,7 @@ exports.up = function(knex, Promise) {
         .references('exercise')
         .inTable('exercises')
         .onDelete('CASCADE')
-        .onUpdate('CASCADE')
+        .onUpdate('CASCADE');
       tbl
         .integer('region_id')
         .unsigned()
@@ -16,7 +16,7 @@ exports.up = function(knex, Promise) {
         .references('region')
         .inTable('body_region')
         .onDelete('CASCADE')
-        .onUpdate('CASCADE')
+        .onUpdate('CASCADE');
       tbl
         .primary(['exercise_id', 'region_id']);
   });
