@@ -10,7 +10,7 @@ module.exports = {
 };
 
 function findExercise() {
-    return db('exercises').select('id', 'exercises');
+    return db('exercises').select('id', 'exercise');
 }
 
 function findByExercise(filter) {

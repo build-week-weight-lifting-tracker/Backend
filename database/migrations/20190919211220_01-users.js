@@ -5,20 +5,22 @@ exports.up = function(knex, Promise) {
         .increments();
       tbl
         .string('first_name', 128)
-        .notNullable()
-        .unique();
+        .notNullable();
       tbl
         .string('last_name', 128)
         .notNullable();
       tbl
         .string('email', 128)
-        .notNullable();
+        .notNullable()
+        .unique();
       tbl
         .string('username', 128)
-        .notNullable();
+        .notNullable()
+        .unique();
       tbl
         .string('password', 128)
-        .notNullable();
+        .notNullable()
+        .unique();
       tbl
         .timestamp('created')
         .defaultTo(knex.fn.now());

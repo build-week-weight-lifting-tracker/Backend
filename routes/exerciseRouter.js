@@ -15,7 +15,7 @@ router.post('/exercises', (req, res) => {
     });
 });
 
-router.get('/exercises', (req, res) => {
+router.get('/', (req, res) => {
     Exercise.findExercise()
     .then(exercises => {
         res.status(200).json(exercises);
@@ -25,21 +25,22 @@ router.get('/exercises', (req, res) => {
     });
 });
 
-router.get('/exercises/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     Exercise.findByExerciseId(req.params.id)
     .then(res => {
         if (res) {
-        res.status(200).json({ item: res })
+            res.status(200).json({ item: res })
         } else {
             res.status(404).json({ message: 'Exercise not found'})
         }
     })
     .catch(err => {
+        console.log(err);
         res.status(500).json({ message: 'Failed to retrieve this exercise'});
     });
 });
 
-router.put('/exercises/:id', (req, res) => {
+router.put(':id', (req, res) => {
     Exercise.updateExercise(req.params.id, req.body)
     .then(res => {
         res.status(200).json({ id: res })
@@ -49,7 +50,7 @@ router.put('/exercises/:id', (req, res) => {
     });
 });
 
-router.delete('/exercises/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
     Exercise.deleteExercise(req.params.id)
     .then(count => {
         if (count > 0) {

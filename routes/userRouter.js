@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 const User = require('../models/usersModel.js');
 
-router.get('/', (req, res) => {
+router.get('/users', (req, res) => {
     User.find()
     .then(users => {
         res.json(users);
