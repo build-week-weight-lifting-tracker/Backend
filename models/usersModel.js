@@ -8,7 +8,7 @@ module.exports = {
 };
 
 function find() {
-    return db('users').select('id', 'username', 'password');
+    return db('users').select('id', 'first_name', 'last_name', 'email', 'username', 'password');
 }
 
 function findBy(filter) {
@@ -16,9 +16,12 @@ function findBy(filter) {
 }
 
 async function add(user) {
-    const [id] = await db('users').insert(user);
+    // const [id] = await db('users').insert(user);
 
-    return findById(id);
+    return db('users').insert(user)
+    .then(ids => {
+        return db('users').where({ id: ids[0]}).first();
+    });
 }
 
 function findById(id) {

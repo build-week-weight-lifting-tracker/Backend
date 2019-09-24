@@ -1,9 +1,16 @@
-const User = require('../models/usersModel');
+const router = require('express').Router();
 const bcrypt = require('bcryptjs');
-const express = require('express');
 const jwt = require('jsonwebtoken');
 
-const router = express.Router();
+const User = require('../models/usersModel.js');
+
+router.get('/', (req, res) => {
+    User.find()
+    .then(users => {
+        res.json(users);
+    })
+    .catch(err => res.send(err))
+    });
 
 router.post('/register', (req, res) => {
     let user = req.body;
@@ -17,7 +24,8 @@ router.post('/register', (req, res) => {
         res.status(201).json({user: saved, token});
     })
     .catch(err => {
-        res.status(500).json(err);
+        console.log(err);
+        res.status(500).json({ message: 'Is this working'});
     });
 });
 
