@@ -1,7 +1,5 @@
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
 
-const User = require('../models/usersModel');
+const jwt = require('jsonwebtoken');
 
 module.exports = (req, res, next) => {
     const token = req.headers.authorization;
