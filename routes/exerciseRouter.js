@@ -49,12 +49,8 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     Exercise.deleteExercise(req.params.id)
-    .then(count => {
-        if (count > 0) {
-            res.status(200).json({ message: 'Deleted'})
-        } else {
-            res.status(404).json({ message: 'Exercise could not be found'})
-        }
+    .then(response => {
+       res.status(200).json({ message: `Deleted ID ${req.params.id}`})
     })
     .catch(err => {
         res.status(500).json({ message: 'Failed to delete exercise'});
