@@ -3,8 +3,9 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const User = require('../models/usersModel.js');
+const restricted = require('../auth/restricted-middleware.js');
 
-router.get('/users', (req, res) => {
+router.get('/users', restricted, (req, res) => {
     User.find()
     .then(users => {
         res.json(users);
