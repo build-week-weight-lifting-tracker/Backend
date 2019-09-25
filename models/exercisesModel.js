@@ -18,9 +18,11 @@ function findByExercise(filter) {
 }
 
 async function addExercise(exercise) {
-    const [id] = await db('exercises').insert(exercise);
-
-    return findById(id);
+     return db('exercises').insert(exercise)
+    
+    .then(ids => {
+        return db('exercises').where({ id: ids[0]}).first();
+    });
 }
 
 function findByExerciseId(id) {

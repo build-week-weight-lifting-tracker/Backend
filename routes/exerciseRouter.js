@@ -3,7 +3,7 @@ const Exercise = require('../models/exercisesModel.js');
 
 const router = express.Router();
 
-router.post('/exercises', (req, res) => {
+router.post('/', (req, res) => {
     const exerciseData = req.body;
 
     Exercise.addExercise(exerciseData)
@@ -11,6 +11,7 @@ router.post('/exercises', (req, res) => {
         res.status(201).json(exercise)
     })
     .catch(err => {
+        console.log(err);
         res.status(500).json({ message: 'Failed to add exercise'});
     });
 });
