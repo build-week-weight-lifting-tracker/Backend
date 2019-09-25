@@ -11,7 +11,6 @@ router.post('/', (req, res) => {
         res.status(201).json(exercise)
     })
     .catch(err => {
-        console.log(err);
         res.status(500).json({ message: 'Failed to add exercise'});
     });
 });
@@ -28,12 +27,9 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     Exercise.findByExerciseId(req.params.id)
-    .then(res => {
-        if (res) {
-            res.status(200).json({ item: res })
-        } else {
-            res.status(404).json({ message: 'Exercise not found'})
-        }
+    .then(response => {
+        if (response) res.status(200).json({ item: response })
+        else res.status(404).json({ message: 'Exercise not found'})
     })
     .catch(err => {
         console.log(err);
