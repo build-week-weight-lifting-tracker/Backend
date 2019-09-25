@@ -37,10 +37,10 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.put(':id', (req, res) => {
+router.put('/:id', (req, res) => {
     Exercise.updateExercise(req.params.id, req.body)
-    .then(res => {
-        res.status(200).json({ id: res })
+    .then(response => {
+        res.status(200).json({ id: response })
     })
     .catch(err => {
         res.status(500).json({ message: 'Failed to update exercise'});
