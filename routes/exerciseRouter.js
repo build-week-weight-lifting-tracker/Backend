@@ -3,6 +3,7 @@ const Exercise = require('../models/exercisesModel.js');
 
 const router = express.Router();
 
+// Create a new exercise 
 router.post('/', (req, res) => {
     const exerciseData = req.body;
 
@@ -15,6 +16,7 @@ router.post('/', (req, res) => {
     });
 });
 
+// Find all exercises
 router.get('/', (req, res) => {
     Exercise.findExercise()
     .then(exercises => {
@@ -25,6 +27,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// Find an exercise by ID
 router.get('/:id', (req, res) => {
     Exercise.findByExerciseId(req.params.id)
     .then(response => {
@@ -37,6 +40,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// Update an exercise 
 router.put('/:id', (req, res) => {
     Exercise.updateExercise(req.params.id, req.body)
     .then(response => {
@@ -47,6 +51,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// Delete an exercise 
 router.delete('/:id', (req, res) => {
     Exercise.deleteExercise(req.params.id)
     .then(response => {
