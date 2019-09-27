@@ -53,7 +53,7 @@ router.get('/users', restricted, (req, res) => {
     });
 
 // GET single user, requires token 
-router.get('/users/:id', (req, res) => {
+router.get('/users/:id', restricted, (req, res) => {
     User.findById(req.params.id)
     .then(response => {
         if (response) res.status(200).json({ User: response })
