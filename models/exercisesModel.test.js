@@ -5,7 +5,7 @@ const db = require('../database/dbConfig.js');
 
 // describe('EXERCISES', () => {
 
-//     describe('GET /', () => {
+//     describe('GET /exercises', () => {
 //         it('should get list of exercises', () => {
 //             return request(server)
 //             .get('/exercises')

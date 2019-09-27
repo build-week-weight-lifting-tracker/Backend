@@ -20,7 +20,7 @@ router.post('/register', (req, res) => {
     })
     .catch(err => {
         console.log(err);
-        res.status(500).json({ message: 'Is this working'});
+        res.status(500).json({ message: 'Unable to register'});
     });
 });
 
@@ -39,7 +39,7 @@ router.post('/login', (req, res) => {
         }
     })
     .catch(err => {
-        res.status(500).json(err);
+        res.status(500).json({ message: 'Unable to login' });
     });
 });
 
@@ -53,7 +53,7 @@ router.get('/users', restricted, (req, res) => {
     });
 
 // GET single user, requires token 
-router.get('/users/:id', (req, res) => {
+router.get('/users/:id', restricted, (req, res) => {
     User.findById(req.params.id)
     .then(response => {
         if (response) res.status(200).json({ User: response })
