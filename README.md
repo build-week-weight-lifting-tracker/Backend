@@ -9,6 +9,10 @@
 | GET    | /api/users                     | Get all users                        | Private |
 | GET    | /api/user                      | Get current user                     | Private |
 | GET    | /api/users/:id                 | Get user by id                       | Private |
+| GET    | /api/users/:id/exercises       | Get exercises by user id             | Public  |
+| POST   | /api/users/:id/exercises       | Create an exercise for a user        | Private |
+| PUT    | /api/users/:id/exercises       | Update an exercise for a user        | Private |
+| DEL    | /api/users/:id/exercises       | Delete an exercise for a user        | Private |
 | GET    | /api/exercises                 | Get list of exercises                | Public  |
 | POST   | /api/exercises                 | Create an exercise                   | Public  |
 | GET    | /api/exercises/:id             | Get specific exercise                | Public  |

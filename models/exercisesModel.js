@@ -17,7 +17,7 @@ function findExercise() {
 
 function findExerciseByUserId(id) {
     return db
-        .select('exercise_id', 'username')
+        .select('user_id', 'exercise_id', 'username')
         .from('user_exercises')
         .join('users', 'user_id', 'user_exercises.exercise_id')
         .where({ user_id: id })
