@@ -43,8 +43,8 @@ router.post('/login', (req, res) => {
     });
 });
 
-// GET all users, requires token  
-router.get('/users', restricted, (req, res) => {
+// GET all users,
+router.get('/users',  (req, res) => {
     User.find()
     .then(users => {
         res.json(users);
@@ -52,8 +52,8 @@ router.get('/users', restricted, (req, res) => {
     .catch(err => res.send(err))
     });
 
-// GET single user, requires token 
-router.get('/users/:id', restricted, (req, res) => {
+// GET single user
+router.get('/users/:id',  (req, res) => {
     User.findById(req.params.id)
     .then(response => {
         if (response) res.status(200).json({ User: response })
