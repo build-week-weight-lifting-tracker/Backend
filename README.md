@@ -52,7 +52,7 @@
 
 ``` 
     {
-    "message": "Unable to register"
+        "message": "Unable to register"
     }
 ``` 
 
