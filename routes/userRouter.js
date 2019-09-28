@@ -64,53 +64,53 @@ router.get('/users/:id',  (req, res) => {
     });
 });
 
-// Post exercises for a specific user
-router.post('/users/:id/exercises', restricted, (req, res) => {
-    Exercise.addExerciseByUserId()
-    .then(response => {
-        if (response) {
-            res.status(200).json({ item: response })
-        } else {
-            res.status(404).json({ message: 'Exercise not found' })
-        }
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json({ message: 'Failed to add exercise' });
-    });
-});
+// // Post exercises for a specific user
+// router.post('/users/:id/exercises', restricted, (req, res) => {
+//     Exercise.addExerciseByUserId()
+//     .then(response => {
+//         if (response) {
+//             res.status(200).json({ item: response })
+//         } else {
+//             res.status(404).json({ message: 'Exercise not found' })
+//         }
+//     })
+//     .catch(err => {
+//         console.log(err);
+//         res.status(500).json({ message: 'Failed to add exercise' });
+//     });
+// });
 
-// GET exercises for a specific user 
-router.get('/users/:id/exercises', restricted, (req, res) => {
-    Exercise.findExerciseByUserId(req.params.id)
-    .then(response => {
-        if (response) res.status(200).json({ item: response })
-        else res.status(404).json({ message: 'Exercises not found' })
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json({ message: 'Failed to retrieve these exercises' });
-    });
-});
+// // GET exercises for a specific user 
+// router.get('/users/:id/exercises', restricted, (req, res) => {
+//     Exercise.findExerciseByUserId(req.params.id)
+//     .then(response => {
+//         if (response) res.status(200).json({ item: response })
+//         else res.status(404).json({ message: 'Exercises not found' })
+//     })
+//     .catch(err => {
+//         console.log(err);
+//         res.status(500).json({ message: 'Failed to retrieve these exercises' });
+//     });
+// });
 
-// Update exercise for specific user
-router.put('/users/:id/exercises', restricted, (req, res) => {
-    Exercise.updateExercise(req.params.id, req.body)
-    .then(response => {
-        res.status(200).json({ item: response })
-    })
-    .catch(err => {
-        res.status(500).json({ message: 'Failed to update exercise '});
-    });
-});
+// // Update exercise for specific user
+// router.put('/users/:id/exercises', restricted, (req, res) => {
+//     Exercise.updateExercise(req.params.id, req.body)
+//     .then(response => {
+//         res.status(200).json({ item: response })
+//     })
+//     .catch(err => {
+//         res.status(500).json({ message: 'Failed to update exercise '});
+//     });
+// });
 
-// Delete exercise for specific user
-router.delete('/users/:id/exercises', restricted, (req, res) => {
-    Exercise.deleteExercise(req.params.id)
-    .then(response => {
-        res.status(200).json({ message: 'Exercise deleted' });
-    });
-});
+// // Delete exercise for specific user
+// router.delete('/users/:id/exercises', restricted, (req, res) => {
+//     Exercise.deleteExercise(req.params.id)
+//     .then(response => {
+//         res.status(200).json({ message: 'Exercise deleted' });
+//     });
+// });
 
 function generateToken(user) {
     const payload = {

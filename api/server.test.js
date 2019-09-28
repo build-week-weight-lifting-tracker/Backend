@@ -26,5 +26,5 @@ describe('the server', () => {
                 expect(res.type).toBe('text/html');
             });
         });
-    })
-})
+    });
+});
