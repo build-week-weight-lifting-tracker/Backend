@@ -43,8 +43,8 @@
         "username": "example",
         "password": "$2a$10$hM1w6LiSVQmvMup5auYB1erZkS5irByGFa24Cjjw6N4RLWwI9pofi",
         "created": ""
-    },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoibHVjYXMyIiwiaWF0IjoxNTY5NTQ2NDU5LCJleHAiOjE1NzIxMzg0NTl9.dH2PUsVxY5CGOnU-dNeafMzx_8njZRJHHtXF1E0ut7I"
+        },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoibHVjYXMyIiwiaWF0IjoxNTY5NTQ2NDU5LCJleHAiOjE1NzIxMzg0NTl9.dH2PUsVxY5CGOnU-dNeafMzx_8njZRJHHtXF1E0ut7I"
     }
 ``` 
 
@@ -54,7 +54,6 @@
     {
     "message": "Unable to register"
     }
-
 ``` 
 
 ## Login 
@@ -73,7 +72,7 @@
 ``` 
     {
         "message": "Hello example!",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoibHVjYXNsIiwiaWF0IjoxNTY5NTQxNjE3LCJleHAiOjE1NzIxMzM2MTd9.H-SX15XK8Ui4GJlmSp-3rRqR7_3jaupjuy4fs7jDQCs"
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoibHVjYXNsIiwiaWF0IjoxNTY5NTQxNjE3LCJleHAiOjE1NzIxMzM2MTd9.H-SX15XK8Ui4GJlmSp-3rRqR7_3jaupjuy4fs7jDQCs"
     }
 ``` 
 
@@ -101,25 +100,25 @@
 
 ```
     {
-    "id": 1,
-    "first_name": "example",
-    "last_name": "example",
-    "email": "example@example.com",
-    "username": "example"
+        "id": 1,
+        "first_name": "example",
+        "last_name": "example",
+        "email": "example@example.com",
+        "username": "example"
     },
     {
-    "id": 2,
-    "first_name": "example",
-    "last_name": "example",
-    "email": "example@example.com",
-    "username": "example"
+        "id": 2,
+        "first_name": "example",
+        "last_name": "example",
+        "email": "example@example.com",
+        "username": "example"
     },
     {
-    "id": 3,
-    "first_name": "example",
-    "last_name": "example",
-    "email": "example@example.com",
-    "username": "example"
+        "id": 3,
+        "first_name": "example",
+        "last_name": "example",
+        "email": "example@example.com",
+        "username": "example"
     }
 ```
 
@@ -132,14 +131,14 @@
 
 ```
     {
-  "User": {
-    "id": 1,
-    "first_name": "example",
-    "last_name": "example",
-    "email": "example@example.com",
-    "username": "example",
-    "password": "$2a$10$7gOSyqBDP5k4bCHAWdReSeJvrMAbdVgGcLDCMV9/L4XSeZ231YlY2",
-    "created": ""
+    "User": {
+        "id": 1,
+        "first_name": "example",
+        "last_name": "example",
+        "email": "example@example.com",
+        "username": "example",
+        "password": "$2a$10$7gOSyqBDP5k4bCHAWdReSeJvrMAbdVgGcLDCMV9/L4XSeZ231YlY2",
+        "created": ""
         }
     }
 ```
@@ -154,16 +153,16 @@
 
 ```
     {
-    "id": 1,
-    "exercise": "Barbell Bench Press"
+        "id": 1,
+        "exercise": "Barbell Bench Press"
     },
     {
-    "id": 2,
-    "exercise": "Dumbbell Bench Press"
+        "id": 2,
+        "exercise": "Dumbbell Bench Press"
     },
     {
-    "id": 3,
-    "exercise": "Incline Barbell/Dumbbell Bench Press"
+        "id": 3,
+        "exercise": "Incline Barbell/Dumbbell Bench Press"
     } 
 ```
 
@@ -195,7 +194,7 @@
 
 ```
     {
-  "message": "Deleted ID 57"
+        "message": "Deleted ID 57"
     }
 ```
 
